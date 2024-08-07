@@ -1,12 +1,12 @@
 # CProjects
 C language project's repository 
-\
+
 
 ## Проекты
 
 ### String.h
 
-Реализация функций библиотеки [string.h](https://github.com/Desolitto/CProjects/tree/develop)
+Реализация функций библиотеки [string.h](https://github.com/Desolitto/CProjects/tree/develop/String.h)
 
 ### Decimal.h
 
