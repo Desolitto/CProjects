@@ -6,7 +6,7 @@ C language project's repository
 
 ### String.h
 
-Реализация функций библиотеки string.h
+Реализация функций библиотеки [string.h](https://github.com/Desolitto/CProjects/tree/develop)
 
 ### Decimal.h
 
