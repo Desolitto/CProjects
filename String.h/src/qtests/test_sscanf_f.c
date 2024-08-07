@@ -8,7 +8,7 @@ START_TEST(sscanf_f) {
   float q1, q2;
   float z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_float_eq(d1, d2);
@@ -25,7 +25,7 @@ START_TEST(sscanf_f1) {
   float q1, q2;
   float z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_float_eq(d1, d2);
@@ -41,7 +41,7 @@ START_TEST(sscanf_f3) {
   float q1, q2;
   float z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_float_eq(d1, d2);
@@ -57,7 +57,7 @@ START_TEST(sscanf_f4) {
   long double q1, q2;
   long double z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_float_eq(d1, d2);
@@ -73,7 +73,7 @@ START_TEST(sscanf_f5) {
   float q1, q2;
   float z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_float_eq(d1, d2);
@@ -90,7 +90,7 @@ START_TEST(sscanf_f6) {
   float z1, z2;
   float w1, w2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1, &w1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1, &w1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2, &w2);
   ck_assert_int_eq(res1, res2);
   ck_assert_float_nan(d1);
@@ -106,7 +106,7 @@ START_TEST(sscanf_f7) {
   char str[] = "Nap";
   float d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_float_eq(d1, d2);
@@ -118,7 +118,7 @@ START_TEST(sscanf_f8) {
   char str[] = "Np";
   float d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_float_eq(d1, d2);
@@ -130,7 +130,7 @@ START_TEST(sscanf_f9) {
   char str[] = "iNd";
   float d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_float_eq(d1, d2);
@@ -142,7 +142,7 @@ START_TEST(sscanf_f10) {
   char str[] = "id";
   float d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_float_eq(d1, d2);
@@ -157,7 +157,7 @@ START_TEST(sscanf_f11) {
   float z1, z2;
   float w1 = 0, w2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1, &w1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1, &w1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2, &w2);
   ck_assert_int_eq(res1, res2);
   ck_assert_float_eq(d1, d2);
@@ -173,7 +173,7 @@ START_TEST(sscanf_f12) {
   float d1, d2;
   float q1 = 0, q2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1);
   int16_t res2 = sscanf(str, format, &d2, &q2);
   ck_assert_int_eq(res1, res2);
   ck_assert_float_eq(d1, d2);
@@ -189,7 +189,7 @@ START_TEST(sscanf_f13) {
   float z1 = 0, z2 = 0;
   float w1 = 0, w2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1, &w1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1, &w1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2, &w2);
   ck_assert_int_eq(res1, res2);
   ck_assert_float_eq(d1, d2);
@@ -207,7 +207,7 @@ START_TEST(sscanf_f14) {
   float z1 = 0, z2 = 0;
   float w1 = 0, w2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1, &w1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1, &w1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2, &w2);
   ck_assert_int_eq(res1, res2);
   ck_assert_float_eq(d1, d2);
@@ -218,7 +218,7 @@ START_TEST(sscanf_f14) {
 END_TEST
 
 Suite *test_sscanf_real(void) {
-  Suite *s = suite_create("\033[45m-=S21_SSCANF_F=-\033[0m");
+  Suite *s = suite_create("\033[45m-=my_SSCANF_F=-\033[0m");
   TCase *tc = tcase_create("sscanf_tc");
 
   tcase_add_test(tc, sscanf_f);

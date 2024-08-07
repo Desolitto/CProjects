@@ -1,90 +1,90 @@
 #include <check.h>
 
-#include "../s21_string.h"
+#include "../my_string.h"
 #include "test_main.h"
 
 START_TEST(memchr_1) {
   char str[] = "Hello, world!";
   int ch = ' ';
-  s21_size_t len = strlen(str);
-  ck_assert_ptr_eq(memchr(str, ch, len), s21_memchr(str, ch, len));
+  my_size_t len = strlen(str);
+  ck_assert_ptr_eq(memchr(str, ch, len), my_memchr(str, ch, len));
 }
 END_TEST
 
 START_TEST(memchr_2) {
   char str[] = "Hello, world!";
   int ch = 101;
-  s21_size_t len = strlen(str);
-  ck_assert_ptr_eq(memchr(str, ch, len), s21_memchr(str, ch, len));
+  my_size_t len = strlen(str);
+  ck_assert_ptr_eq(memchr(str, ch, len), my_memchr(str, ch, len));
 }
 END_TEST
 
 START_TEST(memchr_3) {
   char str[] = "Hello, world!";
   int ch = '1';
-  s21_size_t len = strlen(str);
-  ck_assert_ptr_eq(memchr(str, ch, len), s21_memchr(str, ch, len));
+  my_size_t len = strlen(str);
+  ck_assert_ptr_eq(memchr(str, ch, len), my_memchr(str, ch, len));
 }
 END_TEST
 
 START_TEST(memchr_4) {
   char str[] = "Hello, world!";
   int ch = 65;
-  s21_size_t len = strlen(str);
-  ck_assert_ptr_eq(memchr(str, ch, len), s21_memchr(str, ch, len));
+  my_size_t len = strlen(str);
+  ck_assert_ptr_eq(memchr(str, ch, len), my_memchr(str, ch, len));
 }
 END_TEST
 
 START_TEST(memchr_5) {
   char str[] = "Hello, world!";
   int ch = 'l';
-  s21_size_t len = 10;
-  ck_assert_ptr_eq(memchr(str, ch, len), s21_memchr(str, ch, len));
+  my_size_t len = 10;
+  ck_assert_ptr_eq(memchr(str, ch, len), my_memchr(str, ch, len));
 }
 END_TEST
 
 START_TEST(memchr_6) {
   char str[] = "Hello, world!";
   int ch = 'w';
-  s21_size_t len = 5;
-  ck_assert_ptr_eq(memchr(str, ch, len), s21_memchr(str, ch, len));
+  my_size_t len = 5;
+  ck_assert_ptr_eq(memchr(str, ch, len), my_memchr(str, ch, len));
 }
 END_TEST
 
 START_TEST(memchr_7) {
   char str[] = "69917020";
   int ch = '3';
-  s21_size_t len = strlen(str);
-  ck_assert_ptr_eq(memchr(str, ch, len), s21_memchr(str, ch, len));
+  my_size_t len = strlen(str);
+  ck_assert_ptr_eq(memchr(str, ch, len), my_memchr(str, ch, len));
 }
 END_TEST
 
 START_TEST(memchr_8) {
   char str[] = "69917020";
   int ch = '6';
-  s21_size_t len = 0;
-  ck_assert_ptr_eq(memchr(str, ch, len), s21_memchr(str, ch, len));
+  my_size_t len = 0;
+  ck_assert_ptr_eq(memchr(str, ch, len), my_memchr(str, ch, len));
 }
 END_TEST
 
 START_TEST(memchr_9) {
   char str[] = "69917020";
   int ch = 'g';
-  s21_size_t len = strlen(str);
-  ck_assert_ptr_eq(memchr(str, ch, len), s21_memchr(str, ch, len));
+  my_size_t len = strlen(str);
+  ck_assert_ptr_eq(memchr(str, ch, len), my_memchr(str, ch, len));
 }
 END_TEST
 
 START_TEST(memchr_10) {
   char str[] = "69917020";
   int ch = '\0';
-  s21_size_t len = 9;
-  ck_assert_ptr_eq(memchr(str, ch, len), s21_memchr(str, ch, len));
+  my_size_t len = 9;
+  ck_assert_ptr_eq(memchr(str, ch, len), my_memchr(str, ch, len));
 }
 END_TEST
 
 Suite *test_memchr(void) {
-  Suite *s = suite_create("\033[45m-=S21_MEMCHR=-\033[0m");
+  Suite *s = suite_create("\033[45m-=my_MEMCHR=-\033[0m");
   TCase *tc = tcase_create("memchr_tc");
 
   suite_add_tcase(s, tc);

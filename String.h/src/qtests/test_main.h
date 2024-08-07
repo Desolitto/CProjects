@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../s21_string.h"
+#include "../my_string.h"
 
 Suite *test_memchr(void);
 Suite *test_memcmp(void);
@@ -48,8 +48,8 @@ Suite *test_sprintf_HEX(void);
 Suite *test_sprintf_pointer(void);
 Suite *test_sprintf_n(void);
 Suite *test_sprintf_e(void);
-Suite *s21_sprintf1_suite(void);
-Suite *s21_sprintf2_suite(void);
+Suite *my_sprintf1_suite(void);
+Suite *my_sprintf2_suite(void);
 Suite *test_sscanf_d(void);
 Suite *test_sscanf_c(void);
 Suite *test_sscanf_s(void);

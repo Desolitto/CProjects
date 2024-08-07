@@ -7,7 +7,7 @@ START_TEST(sprintf_1_asterisk) {
   char *str3 = "Test %.*d Test";
   int val = -12;
   ck_assert_int_eq(sprintf(str1, str3, val, 1),
-                   s21_sprintf(str2, str3, val, 1));
+                   my_sprintf(str2, str3, val, 1));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -21,7 +21,7 @@ START_TEST(sprintf_2_asterisk) {
   int b = 2;
   int c = 456;
   ck_assert_int_eq(sprintf(str1, str3, a, b, c),
-                   s21_sprintf(str2, str3, a, b, c));
+                   my_sprintf(str2, str3, a, b, c));
 
   ck_assert_pstr_eq(str1, str2);
 }
@@ -35,7 +35,7 @@ START_TEST(sprintf_2_3_asterisk) {
   int b = 2;
   int c = 456;
   ck_assert_int_eq(sprintf(str1, str3, a, b, c),
-                   s21_sprintf(str2, str3, a, b, c));
+                   my_sprintf(str2, str3, a, b, c));
 
   ck_assert_pstr_eq(str1, str2);
 }
@@ -54,7 +54,7 @@ START_TEST(sprintf_2_2_asterisk) {
   unsigned int ast3 = 4;
   unsigned int ast4 = 10;
   unsigned int ast5 = 7;
-  int res1 = s21_sprintf(str1, str3, ast, val, ast2, val2, ast3, ast4, val3,
+  int res1 = my_sprintf(str1, str3, ast, val, ast2, val2, ast3, ast4, val3,
                          ast5, val4);
   int res2 =
       sprintf(str2, str3, ast, val, ast2, val2, ast3, ast4, val3, ast5, val4);
@@ -87,7 +87,7 @@ START_TEST(sprintf_3_asterisk) {
       sprintf(str1, str3, arg_width, arg_accur, val, arg_width1, arg_accur1,
               val2, arg_width2, arg_accur2, val3, arg_width3, arg_accur3, val4,
               arg_width4, arg_accur4, val5),
-      s21_sprintf(str2, str3, arg_width, arg_accur, val, arg_width1, arg_accur1,
+      my_sprintf(str2, str3, arg_width, arg_accur, val, arg_width1, arg_accur1,
                   val2, arg_width2, arg_accur2, val3, arg_width3, arg_accur3,
                   val4, arg_width4, arg_accur4, val5));
   ck_assert_pstr_eq(str1, str2);
@@ -105,7 +105,7 @@ START_TEST(sprintf_4_asterisk) {
   unsigned int val2 = 012;  // u
   int val3 = 012;           // o
   ck_assert_int_eq(sprintf(str1, str3, 10, val, 2, val2, 0, val3),
-                   s21_sprintf(str2, str3, 10, val, 2, val2, 0, val3));
+                   my_sprintf(str2, str3, 10, val, 2, val2, 0, val3));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -130,7 +130,7 @@ START_TEST(sprintf_5_asterisk) {
   ck_assert_int_eq(
       sprintf(str1, str3, arg_accur, val, arg_accur1, val2, arg_accur2, val3,
               arg_accur3, val4, arg_accur4, val5),
-      s21_sprintf(str2, str3, arg_accur, val, arg_accur1, val2, arg_accur2,
+      my_sprintf(str2, str3, arg_accur, val, arg_accur1, val2, arg_accur2,
                   val3, arg_accur3, val4, arg_accur4, val5));
   ck_assert_pstr_eq(str1, str2);
 }
@@ -151,7 +151,7 @@ START_TEST(sprintf_6_asterisk) {
 
   ck_assert_int_eq(sprintf(str1, str3, arg_accur, val, arg_accur1, val1,
                            arg_accur2, val2, arg_accur3, val3),
-                   s21_sprintf(str2, str3, arg_accur, val, arg_accur1, val1,
+                   my_sprintf(str2, str3, arg_accur, val, arg_accur1, val1,
                                arg_accur2, val2, arg_accur3, val3));
   ck_assert_pstr_eq(str1, str2);
 }
@@ -167,7 +167,7 @@ START_TEST(sprintf_7_asterisk) {
   int val3 = -99;
   int val4 = -2939;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3, val4),
-                   s21_sprintf(str2, str3, val, val2, val3, val4));
+                   my_sprintf(str2, str3, val, val2, val3, val4));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -183,7 +183,7 @@ START_TEST(sprintf_8_asterisk) {
   int val4 = -2939;
   int val5 = -0123;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3, val4, val5),
-                   s21_sprintf(str2, str3, val, val2, val3, val4, val5));
+                   my_sprintf(str2, str3, val, val2, val3, val4, val5));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -198,7 +198,7 @@ START_TEST(sprintf_9_asterisk) {
   int val3 = -99;
   int val4 = -2939;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3, val4),
-                   s21_sprintf(str2, str3, val, val2, val3, val4));
+                   my_sprintf(str2, str3, val, val2, val3, val4));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -211,7 +211,7 @@ START_TEST(sprintf_10_asterisk) {
   int val = 0;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val, val, val, val, val, val, val, val),
-      s21_sprintf(str2, str3, val, val, val, val, val, val, val, val, val,
+      my_sprintf(str2, str3, val, val, val, val, val, val, val, val, val,
                   val));
   ck_assert_pstr_eq(str1, str2);
 }
@@ -228,7 +228,7 @@ START_TEST(sprintf_11_asterisk) {
   int val4 = -32311;
   int val5 = -23;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3, val4, val5),
-                   s21_sprintf(str2, str3, val, val2, val3, val4, val5));
+                   my_sprintf(str2, str3, val, val2, val3, val4, val5));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -244,13 +244,13 @@ START_TEST(sprintf_12_asterisk) {
   int val4 = -32311;
   int val5 = 3261;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3, val4, val5),
-                   s21_sprintf(str2, str3, val, val2, val3, val4, val5));
+                   my_sprintf(str2, str3, val, val2, val3, val4, val5));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
 
 Suite *test_sprintf_asterisk(void) {
-  Suite *s = suite_create("\033[45m-=S21_SPRINTF_asterisk=-\033[0m");
+  Suite *s = suite_create("\033[45m-=my_SPRINTF_asterisk=-\033[0m");
   TCase *tc = tcase_create("sprintf_tc");
 
   tcase_add_test(tc, sprintf_1_asterisk);

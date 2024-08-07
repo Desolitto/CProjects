@@ -2,7 +2,7 @@
 
 int main(void) {
   int failed = 0;
-  Suite *s21_string_test[] = {test_memchr(),           test_memcmp(),
+  Suite *my_string_test[] = {test_memchr(),           test_memcmp(),
                               test_memcpy(),           test_memmove(),
                               test_memset(),           test_strcat(),
                               test_strncat(),          test_strchr(),
@@ -22,7 +22,7 @@ int main(void) {
                               test_sprintf_n(),        test_sprintf_HEX(),
                               test_sprintf_hex(),      test_sprintf_asterisk(),
                               test_sprintf_pointer(),  test_sprintf_signed_i(),
-                              s21_sprintf1_suite(),    s21_sprintf2_suite(),
+                              my_sprintf1_suite(),    my_sprintf2_suite(),
                               test_sscanf_d(),  // SSCANF
                               test_sscanf_s(),         test_sscanf_c(),
                               test_sscanf_i(),         test_sscanf_u(),
@@ -30,8 +30,8 @@ int main(void) {
                               test_sscanf_n(),         test_sscanf_p(),
                               test_sscanf_real(),      NULL};
 
-  for (int i = 0; s21_string_test[i] != NULL; i++) {
-    SRunner *sr = srunner_create(s21_string_test[i]);
+  for (int i = 0; my_string_test[i] != NULL; i++) {
+    SRunner *sr = srunner_create(my_string_test[i]);
 
     srunner_set_fork_status(sr, CK_NOFORK);
     srunner_run_all(sr, CK_NORMAL);

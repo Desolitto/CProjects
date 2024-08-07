@@ -5,7 +5,7 @@ START_TEST(strcmp_1) {
   char s2[] = "Sasha";
   int n1 = strcmp(s1, s2);
   n1 = n1 > 0 ? 1 : n1 == 0 ? 0 : -1;
-  int n2 = s21_strcmp(s1, s2);
+  int n2 = my_strcmp(s1, s2);
   n2 = n2 > 0 ? 1 : n2 == 0 ? 0 : -1;
   ck_assert_int_eq(n1, n2);
 }
@@ -16,7 +16,7 @@ START_TEST(strcmp_2) {
   char s2[] = "Dima";
   int n1 = strcmp(s1, s2);
   n1 = n1 > 0 ? 1 : n1 == 0 ? 0 : -1;
-  int n2 = s21_strcmp(s1, s2);
+  int n2 = my_strcmp(s1, s2);
   n2 = n2 > 0 ? 1 : n2 == 0 ? 0 : -1;
   ck_assert_int_eq(n1, n2);
 }
@@ -27,7 +27,7 @@ START_TEST(strcmp_3) {
   char s2[] = "";
   int n1 = strcmp(s1, s2);
   n1 = n1 > 0 ? 1 : n1 == 0 ? 0 : -1;
-  int n2 = s21_strcmp(s1, s2);
+  int n2 = my_strcmp(s1, s2);
   n2 = n2 > 0 ? 1 : n2 == 0 ? 0 : -1;
   ck_assert_int_eq(n1, n2);
 }
@@ -38,7 +38,7 @@ START_TEST(strcmp_4) {
   char s2[] = "\0";
   int n1 = strcmp(s1, s2);
   n1 = n1 > 0 ? 1 : n1 == 0 ? 0 : -1;
-  int n2 = s21_strcmp(s1, s2);
+  int n2 = my_strcmp(s1, s2);
   n2 = n2 > 0 ? 1 : n2 == 0 ? 0 : -1;
   ck_assert_int_eq(n1, n2);
 }
@@ -49,7 +49,7 @@ START_TEST(strcmp_5) {
   char s2[] = "j";
   int n1 = strcmp(s1, s2);
   n1 = n1 > 0 ? 1 : n1 == 0 ? 0 : -1;
-  int n2 = s21_strcmp(s1, s2);
+  int n2 = my_strcmp(s1, s2);
   n2 = n2 > 0 ? 1 : n2 == 0 ? 0 : -1;
   ck_assert_int_eq(n1, n2);
 }
@@ -60,7 +60,7 @@ START_TEST(strcmp_6) {
   char s2[] = "\0";
   int n1 = strcmp(s1, s2);
   n1 = n1 > 0 ? 1 : n1 == 0 ? 0 : -1;
-  int n2 = s21_strcmp(s1, s2);
+  int n2 = my_strcmp(s1, s2);
   n2 = n2 > 0 ? 1 : n2 == 0 ? 0 : -1;
   ck_assert_int_eq(n1, n2);
 }
@@ -71,14 +71,14 @@ START_TEST(strcmp_7) {
   char s2[] = "rim";
   int n1 = strcmp(s1, s2);
   n1 = n1 > 0 ? 1 : n1 == 0 ? 0 : -1;
-  int n2 = s21_strcmp(s1, s2);
+  int n2 = my_strcmp(s1, s2);
   n2 = n2 > 0 ? 1 : n2 == 0 ? 0 : -1;
   ck_assert_int_eq(n1, n2);
 }
 END_TEST
 
 Suite *test_strcmp(void) {
-  Suite *s = suite_create("\033[45m-=S21_STRCMP=-\033[0m");
+  Suite *s = suite_create("\033[45m-=my_STRCMP=-\033[0m");
   TCase *tc = tcase_create("strcmp_tc");
 
   suite_add_tcase(s, tc);

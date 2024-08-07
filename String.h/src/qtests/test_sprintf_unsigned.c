@@ -6,7 +6,7 @@ START_TEST(sprintf_1_unsigned) {
   char str2[100] = "";
   char *str3 = "Test %u Test";
   unsigned int val = 012;
-  ck_assert_int_eq(sprintf(str1, str3, val), s21_sprintf(str2, str3, val));
+  ck_assert_int_eq(sprintf(str1, str3, val), my_sprintf(str2, str3, val));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -20,7 +20,7 @@ START_TEST(sprintf_2_unsigned) {
   unsigned int val2 = 017;
   unsigned int val3 = 07464;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3),
-                   s21_sprintf(str2, str3, val, val2, val3));
+                   my_sprintf(str2, str3, val, val2, val3));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -34,7 +34,7 @@ START_TEST(sprintf_3_unsigned) {
   unsigned int val2 = 712;
   unsigned int val3 = 99;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3),
-                   s21_sprintf(str2, str3, val, val2, val3));
+                   my_sprintf(str2, str3, val, val2, val3));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -49,7 +49,7 @@ START_TEST(sprintf_4_unsigned) {
   unsigned short val3 = 22600;
   unsigned short val4 = 120;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3, val4),
-                   s21_sprintf(str2, str3, val, val2, val3, val4));
+                   my_sprintf(str2, str3, val, val2, val3, val4));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -63,7 +63,7 @@ START_TEST(sprintf_5_unsigned) {
   unsigned int val2 = 01234;
   unsigned int val3 = 99;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3),
-                   s21_sprintf(str2, str3, val, val2, val3));
+                   my_sprintf(str2, str3, val, val2, val3));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -78,7 +78,7 @@ START_TEST(sprintf_6_unsigned) {
   unsigned int val3 = 99;
   unsigned int val4 = 38;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3, val4),
-                   s21_sprintf(str2, str3, val, val2, val3, val4));
+                   my_sprintf(str2, str3, val, val2, val3, val4));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -93,7 +93,7 @@ START_TEST(sprintf_7_unsigned) {
   unsigned int val3 = 99;
   unsigned int val4 = 2939;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3, val4),
-                   s21_sprintf(str2, str3, val, val2, val3, val4));
+                   my_sprintf(str2, str3, val, val2, val3, val4));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -109,7 +109,7 @@ START_TEST(sprintf_8_unsigned) {
   unsigned int val4 = 2939;
   unsigned int val5 = 0123;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3, val4, val5),
-                   s21_sprintf(str2, str3, val, val2, val3, val4, val5));
+                   my_sprintf(str2, str3, val, val2, val3, val4, val5));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -124,7 +124,7 @@ START_TEST(sprintf_9_unsigned) {
   unsigned int val3 = 99;
   unsigned int val4 = 2939;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3, val4),
-                   s21_sprintf(str2, str3, val, val2, val3, val4));
+                   my_sprintf(str2, str3, val, val2, val3, val4));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -136,10 +136,10 @@ START_TEST(sprintf_10_unsigned) {
   char *str3 = "%u Test %3.u Test %5.7u TEST %10u %#u %-u %+u %.u % .u";
   unsigned int val = 0;
   sprintf(str1, str3, val, val, val, val, val, val, val, val, val);
-  s21_sprintf(str2, str3, val, val, val, val, val, val, val, val, val);
+  my_sprintf(str2, str3, val, val, val, val, val, val, val, val, val);
   ck_assert_int_eq(
       sprintf(str1, str3, val, val, val, val, val, val, val, val, val),
-      s21_sprintf(str2, str3, val, val, val, val, val, val, val, val, val));
+      my_sprintf(str2, str3, val, val, val, val, val, val, val, val, val));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -155,7 +155,7 @@ START_TEST(sprintf_11_unsigned) {
   unsigned int val4 = 32311;
   unsigned int val5 = 3261;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3, val4, val5),
-                   s21_sprintf(str2, str3, val, val2, val3, val4, val5));
+                   my_sprintf(str2, str3, val, val2, val3, val4, val5));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -171,7 +171,7 @@ START_TEST(sprintf_12_unsigned) {
   unsigned int val4 = 32311;
   unsigned int val5 = 23;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3, val4, val5),
-                   s21_sprintf(str2, str3, val, val2, val3, val4, val5));
+                   my_sprintf(str2, str3, val, val2, val3, val4, val5));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -187,7 +187,7 @@ START_TEST(sprintf_13_unsigned) {
   unsigned int val4 = 32311;
   unsigned int val5 = 8894;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3, val4, val5),
-                   s21_sprintf(str2, str3, val, val2, val3, val4, val5));
+                   my_sprintf(str2, str3, val, val2, val3, val4, val5));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -203,7 +203,7 @@ START_TEST(sprintf_14_unsigned) {
   unsigned int val4 = 32311;
   unsigned int val5 = 8894;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3, val4, val5),
-                   s21_sprintf(str2, str3, val, val2, val3, val4, val5));
+                   my_sprintf(str2, str3, val, val2, val3, val4, val5));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -224,7 +224,7 @@ START_TEST(sprintf_15_unsigned) {
   unsigned int ast5 = 7;
   ck_assert_int_eq(
       sprintf(str1, str3, ast, val, ast2, val2, ast3, ast4, val3, ast5, val4),
-      s21_sprintf(str2, str3, ast, val, ast2, val2, ast3, ast4, val3, ast5,
+      my_sprintf(str2, str3, ast, val, ast2, val2, ast3, ast4, val3, ast5,
                   val4));
   ck_assert_pstr_eq(str1, str2);
 }
@@ -235,7 +235,7 @@ START_TEST(sprintf_16_unsigned) {
   char str2[200];
   char *str3 = "fdsdsds %lu";
   unsigned long int val = ULONG_MAX;
-  ck_assert_int_eq(sprintf(str1, str3, val), s21_sprintf(str2, str3, val));
+  ck_assert_int_eq(sprintf(str1, str3, val), my_sprintf(str2, str3, val));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -249,7 +249,7 @@ START_TEST(sprintf_17_unsigned) {
   unsigned int val3 = 3231;
   unsigned int val4 = 3231;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3, val4),
-                   s21_sprintf(str2, str3, val, val2, val3, val4));
+                   my_sprintf(str2, str3, val, val2, val3, val4));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -268,7 +268,7 @@ START_TEST(sprintf_18_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -287,7 +287,7 @@ START_TEST(sprintf_19_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -306,7 +306,7 @@ START_TEST(sprintf_20_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -325,7 +325,7 @@ START_TEST(sprintf_21_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -344,7 +344,7 @@ START_TEST(sprintf_22_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -363,7 +363,7 @@ START_TEST(sprintf_23_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -382,7 +382,7 @@ START_TEST(sprintf_24_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -401,7 +401,7 @@ START_TEST(sprintf_25_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -420,7 +420,7 @@ START_TEST(sprintf_26_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -440,7 +440,7 @@ START_TEST(sprintf_27_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -459,7 +459,7 @@ START_TEST(sprintf_28_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -478,7 +478,7 @@ START_TEST(sprintf_29_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -497,7 +497,7 @@ START_TEST(sprintf_30_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -516,7 +516,7 @@ START_TEST(sprintf_31_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -535,7 +535,7 @@ START_TEST(sprintf_32_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -555,7 +555,7 @@ START_TEST(sprintf_33_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -576,7 +576,7 @@ START_TEST(sprintf_34_unsigned) {
   int val8 = 1000;
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, val3, val4, val5, val6, val7, val8),
-      s21_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
+      my_sprintf(str2, str3, val, val2, val3, val4, val5, val6, val7, val8));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -590,7 +590,7 @@ START_TEST(sprintf_35_unsigned) {
   int ast = 2;
   int ast2 = 5;
   ck_assert_int_eq(sprintf(str1, str3, ast, val, ast2, val2),
-                   s21_sprintf(str2, str3, ast, val, ast2, val2));
+                   my_sprintf(str2, str3, ast, val, ast2, val2));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -604,7 +604,7 @@ START_TEST(sprintf_36_unsigned) {
   int ast = 2;
   int ast2 = 5;
   ck_assert_int_eq(sprintf(str1, str3, ast, val, ast2, val2),
-                   s21_sprintf(str2, str3, ast, val, ast2, val2));
+                   my_sprintf(str2, str3, ast, val, ast2, val2));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -618,7 +618,7 @@ START_TEST(sprintf_37_unsigned) {
   int ast = 2;
   int ast2 = 5;
   ck_assert_int_eq(sprintf(str1, str3, ast, val, ast2, val2),
-                   s21_sprintf(str2, str3, ast, val, ast2, val2));
+                   my_sprintf(str2, str3, ast, val, ast2, val2));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -632,7 +632,7 @@ START_TEST(sprintf_38_unsigned) {
   int ast = 2;
   int ast2 = 5;
   ck_assert_int_eq(sprintf(str1, str3, ast, val, ast2, val2),
-                   s21_sprintf(str2, str3, ast, val, ast2, val2));
+                   my_sprintf(str2, str3, ast, val, ast2, val2));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -646,7 +646,7 @@ START_TEST(sprintf_39_unsigned) {
   int ast = 2;
   int ast2 = 5;
   ck_assert_int_eq(sprintf(str1, str3, ast, val, ast2, val2),
-                   s21_sprintf(str2, str3, ast, val, ast2, val2));
+                   my_sprintf(str2, str3, ast, val, ast2, val2));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -660,7 +660,7 @@ START_TEST(sprintf_40_unsigned) {
   int ast = 2;
   int ast2 = 5;
   ck_assert_int_eq(sprintf(str1, str3, ast, val, ast2, val2),
-                   s21_sprintf(str2, str3, ast, val, ast2, val2));
+                   my_sprintf(str2, str3, ast, val, ast2, val2));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -674,7 +674,7 @@ START_TEST(sprintf_41_unsigned) {
   int val2 = 8899;
   int val3 = 2;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3),
-                   s21_sprintf(str2, str3, val, val2, val3));
+                   my_sprintf(str2, str3, val, val2, val3));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -688,7 +688,7 @@ START_TEST(sprintf_42_unsigned) {
   int val2 = 8899;
   int val3 = 2;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3),
-                   s21_sprintf(str2, str3, val, val2, val3));
+                   my_sprintf(str2, str3, val, val2, val3));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -702,7 +702,7 @@ START_TEST(sprintf_43_unsigned) {
   int val2 = 0;
   int val3 = 0;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, val3),
-                   s21_sprintf(str2, str3, val, val2, val3));
+                   my_sprintf(str2, str3, val, val2, val3));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
@@ -712,13 +712,13 @@ START_TEST(sprintf_44_unsigned) {
   char str2[100];
   char *str3 = "Test %lu";
   unsigned long int val = ULONG_MAX;
-  ck_assert_int_eq(sprintf(str1, str3, val), s21_sprintf(str2, str3, val));
+  ck_assert_int_eq(sprintf(str1, str3, val), my_sprintf(str2, str3, val));
   ck_assert_pstr_eq(str1, str2);
 }
 END_TEST
 
 Suite *test_sprintf_unsigned(void) {
-  Suite *s = suite_create("\033[45m-=S21_SPRINTF_UNSIGNED=-\033[0m");
+  Suite *s = suite_create("\033[45m-=my_SPRINTF_UNSIGNED=-\033[0m");
   TCase *tc = tcase_create("sprintf_tc");
 
   tcase_add_test(tc, sprintf_1_unsigned);

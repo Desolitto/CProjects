@@ -1,14 +1,14 @@
 CC=gcc
 FLAGS=-std=c11 -g -Wall -Werror -Wextra
 GLFLAGS=--coverage
-LIBNAME = s21_string.a
+LIBNAME = my_string.a
 
 SOURCE = $(wildcard ./qtests/test_*.c) 
 
 
-S21_STRING_C=s21_*.c
-S21_STRING_H=s21_*.h
-S21_STRING_O=s21_*.o
+MY_STRING_C=my_*.c
+MY_STRING_H=my_*.h
+MY_STRING_O=my_*.o
 TESTS=test
 SYSTEM := $(shell uname -s)
 
@@ -27,19 +27,19 @@ endif
 
 PATH := $(BREW)/bin:$(PATH)
 
-all: s21_string.a  
+all: my_string.a  
 
-s21_string.a: 
-		$(CC) $(FLAGS) -c $(S21_STRING_C)        
-		ar rcs $(LIBNAME) $(S21_STRING_O)
+my_string.a: 
+		$(CC) $(FLAGS) -c $(MY_STRING_C)        
+		ar rcs $(LIBNAME) $(MY_STRING_O)
 		ranlib $(LIBNAME)
 
-s21_covered:
-		$(CC) $(FLAGS) -c $(S21_STRING_C)  ${ADD_LIB} ${SOURCE} $(GLFLAGS) 
-		ar rc $(LIBNAME) $(S21_STRING_O)
+my_covered:
+		$(CC) $(FLAGS) -c $(MY_STRING_C)  ${ADD_LIB} ${SOURCE} $(GLFLAGS) 
+		ar rc $(LIBNAME) $(MY_STRING_O)
 		ranlib $(LIBNAME)
 
-test: clean s21_covered
+test: clean my_covered
 	$(CC) ${SOURCE} -c ${ADD_LIB} $(FLAGS) $(GLFLAGS) 
 	$(CC) $(TESTS)*.o $(LIBNAME) -o $(TESTS) ${ADD_LIB} $(FLAGS) $(GLFLAGS) 
 
@@ -55,8 +55,8 @@ install:
 
 gcov_report: test
 	./$(TESTS)
-	lcov -t "s21_string" -o s21_string.info -c -d .
-	genhtml -o report s21_string.info
+	lcov -t "my_string" -o my_string.info -c -d .
+	genhtml -o report my_string.info
 	open report/index.html
 
 check:

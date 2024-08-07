@@ -5,7 +5,7 @@ START_TEST(sscanf_spec_p_1) {
   char str[] = "0xAAAA";
   int *p1 = 0, *p2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &p1);
+  int16_t res1 = my_sscanf(str, format, &p1);
   int16_t res2 = sscanf(str, format, &p2);
   ck_assert_int_eq(res1, res2);
   ck_assert_ptr_eq(p1, p2);
@@ -17,7 +17,7 @@ START_TEST(sscanf_spec_p_2) {
   char str[] = "0xAAAA";
   int *p1 = 0, *p2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &p1);
+  int16_t res1 = my_sscanf(str, format, &p1);
   int16_t res2 = sscanf(str, format, &p2);
   ck_assert_int_eq(res1, res2);
   ck_assert_ptr_eq(p1, p2);
@@ -29,7 +29,7 @@ START_TEST(sscanf_spec_p_3) {
   char str[] = "0xFFFFFF";
   int *p1 = 0, *p2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &p1);
+  int16_t res1 = my_sscanf(str, format, &p1);
   int16_t res2 = sscanf(str, format, &p2);
   ck_assert_int_eq(res1, res2);
   ck_assert_ptr_eq(p1, p2);
@@ -41,7 +41,7 @@ START_TEST(sscanf_spec_p_4) {
   char str[] = "0x0000";
   int *p1 = 0, *p2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &p1);
+  int16_t res1 = my_sscanf(str, format, &p1);
   int16_t res2 = sscanf(str, format, &p2);
   ck_assert_int_eq(res1, res2);
   ck_assert_ptr_eq(p1, p2);
@@ -53,7 +53,7 @@ START_TEST(sscanf_spec_p_5) {
   char str[] = "0xA2361598";
   int *p1 = 0, *p2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &p1);
+  int16_t res1 = my_sscanf(str, format, &p1);
   int16_t res2 = sscanf(str, format, &p2);
   ck_assert_int_eq(res1, res2);
   ck_assert_ptr_eq(p1, p2);
@@ -65,7 +65,7 @@ START_TEST(sscanf_spec_p_6) {
   char str[] = "0x34567hjk";
   int *p1 = 0, *p2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &p1);
+  int16_t res1 = my_sscanf(str, format, &p1);
   int16_t res2 = sscanf(str, format, &p2);
   ck_assert_int_eq(res1, res2);
   ck_assert_ptr_eq(p1, p2);
@@ -77,7 +77,7 @@ START_TEST(sscanf_spec_p_7) {
   char str[] = "0x34567hjk678";
   int *p1 = 0, *p2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &p1);
+  int16_t res1 = my_sscanf(str, format, &p1);
   int16_t res2 = sscanf(str, format, &p2);
   ck_assert_int_eq(res1, res2);
   ck_assert_ptr_eq(p1, p2);
@@ -89,7 +89,7 @@ START_TEST(sscanf_spec_p_8) {
   char str[] = "0x34ABcd68";
   int *p1 = 0, *p2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &p1);
+  int16_t res1 = my_sscanf(str, format, &p1);
   int16_t res2 = sscanf(str, format, &p2);
   ck_assert_int_eq(res1, res2);
   ck_assert_ptr_eq(p1, p2);
@@ -102,7 +102,7 @@ START_TEST(sscanf_spec_p_9) {
   char str[] = "1234567890ABCDEF";
   int *p1 = 0, *p2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &p1);
+  int16_t res1 = my_sscanf(str, format, &p1);
   int16_t res2 = sscanf(str, format, &p2);
   ck_assert_int_eq(res1, res2);
   ck_assert_ptr_eq(p1, p2);
@@ -114,7 +114,7 @@ START_TEST(sscanf_spec_p_10) {
   char str[] = "0x237481";
   int *p1 = 0, *p2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &p1);
+  int16_t res1 = my_sscanf(str, format, &p1);
   int16_t res2 = sscanf(str, format, &p2);
   ck_assert_int_eq(res1, res2);
   ck_assert_ptr_eq(p1, p2);
@@ -126,7 +126,7 @@ START_TEST(sscanf_spec_p_11) {
   char str[] = "0xdksajh";
   int *p1 = 0, *p2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &p1);
+  int16_t res1 = my_sscanf(str, format, &p1);
   int16_t res2 = sscanf(str, format, &p2);
   ck_assert_int_eq(res1, res2);
   ck_assert_ptr_eq(p1, p2);
@@ -138,7 +138,7 @@ START_TEST(sscanf_spec_p_12) {
   char str[] = "0xAGAGUIY";
   int *p1 = 0, *p2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &p1);
+  int16_t res1 = my_sscanf(str, format, &p1);
   int16_t res2 = sscanf(str, format, &p2);
   ck_assert_int_eq(res1, res2);
   ck_assert_ptr_eq(p1, p2);
@@ -150,7 +150,7 @@ START_TEST(sscanf_spec_p_13) {
   char str[] = "0xAGAGUIYUYGFSV";
   int *p1 = 0, *p2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &p1);
+  int16_t res1 = my_sscanf(str, format, &p1);
   int16_t res2 = sscanf(str, format, &p2);
   ck_assert_int_eq(res1, res2);
   ck_assert_ptr_eq(p1, p2);
@@ -162,7 +162,7 @@ START_TEST(sscanf_spec_p_14) {
   char str[] = "0xAA64BB";
   int *p1 = 0, *p2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &p1);
+  int16_t res1 = my_sscanf(str, format, &p1);
   int16_t res2 = sscanf(str, format, &p2);
   ck_assert_int_eq(res1, res2);
   ck_assert_ptr_eq(p1, p2);
@@ -174,7 +174,7 @@ START_TEST(sscanf_spec_p_15) {
   char str[] = "0xGGH7TY";
   int *p1 = 0, *p2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &p1);
+  int16_t res1 = my_sscanf(str, format, &p1);
   int16_t res2 = sscanf(str, format, &p2);
   ck_assert_int_eq(res1, res2);
   ck_assert_ptr_eq(p1, p2);
@@ -182,7 +182,7 @@ START_TEST(sscanf_spec_p_15) {
 END_TEST
 
 Suite *test_sscanf_p(void) {
-  Suite *s = suite_create("\033[45m-=S21_SSCANF_P=-\033[0m");
+  Suite *s = suite_create("\033[45m-=my_SSCANF_P=-\033[0m");
   TCase *tc = tcase_create("sscanf_tc");
 
   tcase_add_test(tc, sscanf_spec_p_1);

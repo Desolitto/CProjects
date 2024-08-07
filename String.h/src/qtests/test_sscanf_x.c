@@ -7,7 +7,7 @@ START_TEST(sscanf_spec_hx_1) {
   unsigned short q1, q2;
   unsigned short z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -23,7 +23,7 @@ START_TEST(sscanf_spec_hx_2) {
   unsigned short q1 = 0, q2 = 0;
   unsigned short z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -38,7 +38,7 @@ START_TEST(sscanf_spec_hx_3) {
   unsigned short d1 = 0, d2 = 0;
   unsigned short q1 = 0, q2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1);
   int16_t res2 = sscanf(str, format, &d2, &q2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -53,7 +53,7 @@ START_TEST(sscanf_spec_hx_4) {
   unsigned short q1 = 0, q2 = 0;
   unsigned short z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -69,7 +69,7 @@ START_TEST(sscanf_spec_hx_5) {
   unsigned short q1 = 0, q2 = 0;
   unsigned short z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -85,7 +85,7 @@ START_TEST(sscanf_spec_hx_6) {
   unsigned short q1 = 0, q2 = 0;
   unsigned short z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -101,7 +101,7 @@ START_TEST(sscanf_spec_hx_7) {
   unsigned short q1 = 0, q2 = 0;
   unsigned short z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -117,7 +117,7 @@ START_TEST(sscanf_spec_hx_8) {
   unsigned short q1 = 0, q2 = 0;
   unsigned short z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -133,7 +133,7 @@ START_TEST(sscanf_spec_hx_9) {
   unsigned short q1 = 0, q2 = 0;
   unsigned short z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -149,7 +149,7 @@ START_TEST(sscanf_spec_hx_10) {
   unsigned short q1 = 0, q2 = 0;
   unsigned short z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -165,7 +165,7 @@ START_TEST(sscanf_spec_hx_11) {
   unsigned short q1 = 0, q2 = 0;
   unsigned short z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -181,7 +181,7 @@ START_TEST(sscanf_spec_x_1) {
   unsigned int q1, q2;
   unsigned int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -197,7 +197,7 @@ START_TEST(sscanf_spec_x_2) {
   unsigned int q1 = 0, q2 = 0;
   unsigned int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -212,7 +212,7 @@ START_TEST(sscanf_spec_x_3) {
   unsigned int d1 = 0, d2 = 0;
   unsigned int q1 = 0, q2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1);
   int16_t res2 = sscanf(str, format, &d2, &q2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -227,7 +227,7 @@ START_TEST(sscanf_spec_x_4) {
   unsigned int q1 = 0, q2 = 0;
   unsigned int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -243,7 +243,7 @@ START_TEST(sscanf_spec_x_5) {
   unsigned int q1 = 0, q2 = 0;
   unsigned int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -259,7 +259,7 @@ START_TEST(sscanf_spec_x_6) {
   unsigned int q1 = 0, q2 = 0;
   unsigned int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -275,7 +275,7 @@ START_TEST(sscanf_spec_x_7) {
   unsigned int q1 = 0, q2 = 0;
   unsigned int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -291,7 +291,7 @@ START_TEST(sscanf_spec_x_8) {
   unsigned int q1 = 0, q2 = 0;
   unsigned int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -307,7 +307,7 @@ START_TEST(sscanf_spec_x_9) {
   unsigned int q1 = 0, q2 = 0;
   unsigned int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -323,7 +323,7 @@ START_TEST(sscanf_spec_x_10) {
   unsigned int q1 = 0, q2 = 0;
   unsigned int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -339,7 +339,7 @@ START_TEST(sscanf_spec_x_11) {
   unsigned int q1 = 0, q2 = 0;
   unsigned int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -355,7 +355,7 @@ START_TEST(sscanf_spec_lx_1) {
   unsigned long int q1, q2;
   unsigned long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -371,7 +371,7 @@ START_TEST(sscanf_spec_lx_2) {
   unsigned long int q1 = 0, q2 = 0;
   unsigned long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -386,7 +386,7 @@ START_TEST(sscanf_spec_lx_3) {
   unsigned long int d1 = 0, d2 = 0;
   unsigned long int q1 = 0, q2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1);
   int16_t res2 = sscanf(str, format, &d2, &q2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -401,7 +401,7 @@ START_TEST(sscanf_spec_lx_4) {
   unsigned long int q1 = 0, q2 = 0;
   unsigned long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -417,7 +417,7 @@ START_TEST(sscanf_spec_lx_5) {
   unsigned long int q1 = 0, q2 = 0;
   unsigned long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -433,7 +433,7 @@ START_TEST(sscanf_spec_lx_6) {
   unsigned long int q1 = 0, q2 = 0;
   unsigned long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -449,7 +449,7 @@ START_TEST(sscanf_spec_lx_7) {
   unsigned long int q1 = 0, q2 = 0;
   unsigned long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -465,7 +465,7 @@ START_TEST(sscanf_spec_lx_8) {
   unsigned long int q1 = 0, q2 = 0;
   unsigned long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -481,7 +481,7 @@ START_TEST(sscanf_spec_lx_9) {
   unsigned long int q1 = 0, q2 = 0;
   unsigned long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -497,7 +497,7 @@ START_TEST(sscanf_spec_lx_10) {
   unsigned long int q1 = 0, q2 = 0;
   unsigned long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -513,7 +513,7 @@ START_TEST(sscanf_spec_lx_11) {
   unsigned long int q1 = 0, q2 = 0;
   unsigned long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -529,7 +529,7 @@ START_TEST(sscanf_spec_llx_1) {
   unsigned long long int q1, q2;
   unsigned long long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -545,7 +545,7 @@ START_TEST(sscanf_spec_llx_2) {
   unsigned long long int q1 = 0, q2 = 0;
   unsigned long long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -560,7 +560,7 @@ START_TEST(sscanf_spec_llx_3) {
   unsigned long long int d1 = 0, d2 = 0;
   unsigned long long int q1 = 0, q2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1);
   int16_t res2 = sscanf(str, format, &d2, &q2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -575,7 +575,7 @@ START_TEST(sscanf_spec_llx_4) {
   unsigned long long int q1 = 0, q2 = 0;
   unsigned long long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -591,7 +591,7 @@ START_TEST(sscanf_spec_llx_5) {
   unsigned long long int q1 = 0, q2 = 0;
   unsigned long long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -607,7 +607,7 @@ START_TEST(sscanf_spec_llx_6) {
   unsigned long long int q1 = 0, q2 = 0;
   unsigned long long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -623,7 +623,7 @@ START_TEST(sscanf_spec_llx_7) {
   unsigned long long int q1 = 0, q2 = 0;
   unsigned long long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -639,7 +639,7 @@ START_TEST(sscanf_spec_llx_8) {
   unsigned long long int q1 = 0, q2 = 0;
   unsigned long long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -655,7 +655,7 @@ START_TEST(sscanf_spec_llx_9) {
   unsigned long long int q1 = 0, q2 = 0;
   unsigned long long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -671,7 +671,7 @@ START_TEST(sscanf_spec_llx_10) {
   unsigned long long int q1 = 0, q2 = 0;
   unsigned long long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -687,7 +687,7 @@ START_TEST(sscanf_spec_llx_11) {
   unsigned long long int q1 = 0, q2 = 0;
   unsigned long long int z1 = 0, z2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &q1, &z1);
+  int16_t res1 = my_sscanf(str, format, &d1, &q1, &z1);
   int16_t res2 = sscanf(str, format, &d2, &q2, &z2);
   ck_assert_int_eq(res1, res2);
   ck_assert_uint_eq(d1, d2);
@@ -697,7 +697,7 @@ START_TEST(sscanf_spec_llx_11) {
 END_TEST
 
 Suite *test_sscanf_x(void) {
-  Suite *s = suite_create("\033[45m-=S21_SSCANF_X=-\033[0m");
+  Suite *s = suite_create("\033[45m-=my_SSCANF_X=-\033[0m");
   TCase *tc = tcase_create("sscanf_tc");
 
   tcase_add_test(tc, sscanf_spec_hx_1);

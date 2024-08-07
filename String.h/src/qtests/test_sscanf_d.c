@@ -5,7 +5,7 @@ START_TEST(sscanf_spec_hd_1) {
   char str[] = "253";
   short d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -17,7 +17,7 @@ START_TEST(sscanf_spec_hd_2) {
   char str[] = "-253";
   short d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -29,7 +29,7 @@ START_TEST(sscanf_spec_hd_3) {
   char str[] = "+253";
   short d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -41,7 +41,7 @@ START_TEST(sscanf_spec_hd_4) {
   char str[] = "-253";
   short d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -53,7 +53,7 @@ START_TEST(sscanf_spec_hd_5) {
   char str[] = "-253";
   short d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -65,7 +65,7 @@ START_TEST(sscanf_spec_hd_6) {
   char str[] = "-253";
   short d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -77,7 +77,7 @@ START_TEST(sscanf_spec_hd_7) {
   char str[] = "-253";
   short d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -89,7 +89,7 @@ START_TEST(sscanf_spec_hd_8) {
   char str[] = "+253";
   short d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -101,7 +101,7 @@ START_TEST(sscanf_spec_hd_9) {
   char str[] = "+253";
   short d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -113,7 +113,7 @@ START_TEST(sscanf_spec_hd_10) {
   char str[] = "+253";
   short d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -125,7 +125,7 @@ START_TEST(sscanf_spec_hd_11) {
   char str[] = "+253";
   short d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -137,7 +137,7 @@ START_TEST(sscanf_spec_hd_12) {
   char str[] = "+253";
   short d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -149,7 +149,7 @@ START_TEST(sscanf_spec_hd_13) {
   char str[] = "253";
   short d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -161,7 +161,7 @@ START_TEST(sscanf_spec_d_1) {
   char str[] = "253";
   int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -173,7 +173,7 @@ START_TEST(sscanf_spec_d_2) {
   char str[] = "-253";
   int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -185,7 +185,7 @@ START_TEST(sscanf_spec_d_3) {
   char str[] = "+253";
   int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -197,7 +197,7 @@ START_TEST(sscanf_spec_d_4) {
   char str[] = "-253";
   int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -209,7 +209,7 @@ START_TEST(sscanf_spec_d_5) {
   char str[] = "-253";
   int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -221,7 +221,7 @@ START_TEST(sscanf_spec_d_6) {
   char str[] = "-253";
   int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -233,7 +233,7 @@ START_TEST(sscanf_spec_d_7) {
   char str[] = "-253";
   int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -245,7 +245,7 @@ START_TEST(sscanf_spec_d_8) {
   char str[] = "+253";
   int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -257,7 +257,7 @@ START_TEST(sscanf_spec_d_9) {
   char str[] = "+253";
   int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -269,7 +269,7 @@ START_TEST(sscanf_spec_d_10) {
   char str[] = "+253";
   int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -281,7 +281,7 @@ START_TEST(sscanf_spec_d_11) {
   char str[] = "+253";
   int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -293,7 +293,7 @@ START_TEST(sscanf_spec_d_12) {
   char str[] = "+253";
   int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -305,7 +305,7 @@ START_TEST(sscanf_spec_d_13) {
   char str[] = "253";
   int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -317,7 +317,7 @@ START_TEST(sscanf_spec_d_14) {
   char str[] = "2147483647";
   int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -329,7 +329,7 @@ START_TEST(sscanf_spec_d_15) {
   char str[] = "+2147483648";
   int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -341,7 +341,7 @@ START_TEST(sscanf_spec_d_16) {
   char str[] = "214743483648";
   int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -353,7 +353,7 @@ START_TEST(sscanf_spec_d_17) {
   char str[] = "-2147483648";
   int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -365,7 +365,7 @@ START_TEST(sscanf_spec_d_18) {
   char str[] = "-2147483649";
   int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -377,7 +377,7 @@ START_TEST(sscanf_spec_d_19) {
   char str[] = "-214748364239";
   int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -389,7 +389,7 @@ START_TEST(sscanf_spec_ld_1) {
   char str[] = "253";
   long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -401,7 +401,7 @@ START_TEST(sscanf_spec_ld_2) {
   char str[] = "-253";
   long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -413,7 +413,7 @@ START_TEST(sscanf_spec_ld_3) {
   char str[] = "+253";
   long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -425,7 +425,7 @@ START_TEST(sscanf_spec_ld_4) {
   char str[] = "-253";
   long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -437,7 +437,7 @@ START_TEST(sscanf_spec_ld_5) {
   char str[] = "-253";
   long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -449,7 +449,7 @@ START_TEST(sscanf_spec_ld_6) {
   char str[] = "-253";
   long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -461,7 +461,7 @@ START_TEST(sscanf_spec_ld_7) {
   char str[] = "-253";
   long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -473,7 +473,7 @@ START_TEST(sscanf_spec_ld_8) {
   char str[] = "+253";
   long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -485,7 +485,7 @@ START_TEST(sscanf_spec_ld_9) {
   char str[] = "+253";
   long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -497,7 +497,7 @@ START_TEST(sscanf_spec_ld_10) {
   char str[] = "+253";
   long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -509,7 +509,7 @@ START_TEST(sscanf_spec_ld_11) {
   char str[] = "+253";
   long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -521,7 +521,7 @@ START_TEST(sscanf_spec_ld_12) {
   char str[] = "+253";
   long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -533,7 +533,7 @@ START_TEST(sscanf_spec_ld_13) {
   char str[] = "253";
   long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -545,7 +545,7 @@ START_TEST(sscanf_spec_ld_14) {
   char str[] = "2147483647";
   long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -557,7 +557,7 @@ START_TEST(sscanf_spec_ld_15) {
   char str[] = "+2147483648";
   long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -569,7 +569,7 @@ START_TEST(sscanf_spec_ld_16) {
   char str[] = "214743483648";
   long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -581,7 +581,7 @@ START_TEST(sscanf_spec_ld_17) {
   char str[] = "-2147483648";
   long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -593,7 +593,7 @@ START_TEST(sscanf_spec_ld_18) {
   char str[] = "-2147483649";
   long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -605,7 +605,7 @@ START_TEST(sscanf_spec_ld_19) {
   char str[] = "-214748364239";
   long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -617,7 +617,7 @@ START_TEST(sscanf_spec_lld_1) {
   char str[] = "123";
   long long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -629,7 +629,7 @@ START_TEST(sscanf_spec_lld_2) {
   char str[] = "-123";
   long long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -641,7 +641,7 @@ START_TEST(sscanf_spec_lld_3) {
   char str[] = "+123";
   long long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -653,7 +653,7 @@ START_TEST(sscanf_spec_lld_4) {
   char str[] = "-123";
   long long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -665,7 +665,7 @@ START_TEST(sscanf_spec_lld_5) {
   char str[] = "-123";
   long long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -677,7 +677,7 @@ START_TEST(sscanf_spec_lld_6) {
   char str[] = "-123";
   long long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -689,7 +689,7 @@ START_TEST(sscanf_spec_lld_7) {
   char str[] = "-123";
   long long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -701,7 +701,7 @@ START_TEST(sscanf_spec_lld_8) {
   char str[] = "+123";
   long long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -713,7 +713,7 @@ START_TEST(sscanf_spec_lld_9) {
   char str[] = "+123";
   long long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -725,7 +725,7 @@ START_TEST(sscanf_spec_lld_10) {
   char str[] = "+123";
   long long int d1, d2;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -737,7 +737,7 @@ START_TEST(sscanf_spec_lld_11) {
   char str[] = "+123";
   long long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -749,7 +749,7 @@ START_TEST(sscanf_spec_lld_12) {
   char str[] = "+123";
   long long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -761,7 +761,7 @@ START_TEST(sscanf_spec_lld_13) {
   char str[] = "123";
   long long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -773,7 +773,7 @@ START_TEST(sscanf_spec_lld_14) {
   char str[] = "2147483647";
   long long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -785,7 +785,7 @@ START_TEST(sscanf_spec_lld_15) {
   char str[] = "+2147483648";
   long long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -797,7 +797,7 @@ START_TEST(sscanf_spec_lld_16) {
   char str[] = "214743483648";
   long long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -809,7 +809,7 @@ START_TEST(sscanf_spec_lld_17) {
   char str[] = "-2147483648";
   long long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -821,7 +821,7 @@ START_TEST(sscanf_spec_lld_18) {
   char str[] = "-2147483649";
   long long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -833,7 +833,7 @@ START_TEST(sscanf_spec_lld_19) {
   char str[] = "-214748364239";
   long long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -845,7 +845,7 @@ START_TEST(sscanf_spec_lld_23) {
   char str[] = "9223372036854775807";
   long long int d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -853,7 +853,7 @@ START_TEST(sscanf_spec_lld_23) {
 END_TEST
 
 Suite *test_sscanf_d(void) {
-  Suite *s = suite_create("\033[45m-=S21_SSCANF_D=-\033[0m");
+  Suite *s = suite_create("\033[45m-=my_SSCANF_D=-\033[0m");
   TCase *tc = tcase_create("sscanf_tc");
 
   tcase_add_test(tc, sscanf_spec_hd_1);

@@ -5,7 +5,7 @@ START_TEST(sscanf_spec_n_1) {
   char str[] = "NameName";
   int n1 = 0, n2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &n1);
+  int16_t res1 = my_sscanf(str, format, &n1);
   int16_t res2 = sscanf(str, format, &n2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(n1, n2);
@@ -18,7 +18,7 @@ START_TEST(sscanf_spec_n_2) {
   int d1 = 0, d2 = 0;
   int n1 = 0, n2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &n1);
+  int16_t res1 = my_sscanf(str, format, &d1, &n1);
   int16_t res2 = sscanf(str, format, &d2, &n2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -36,7 +36,7 @@ START_TEST(sscanf_spec_n_3) {
   int k1 = 0, k2 = 0;
   int n1 = 0, n2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1, &dd1, &n1, &f1, &ff1, &k1);
+  int16_t res1 = my_sscanf(str, format, &d1, &dd1, &n1, &f1, &ff1, &k1);
   int16_t res2 = sscanf(str, format, &d2, &dd2, &n2, &f2, &ff2, &k2);
   ck_assert_int_eq(res1, res2);
   ck_assert_int_eq(d1, d2);
@@ -61,7 +61,7 @@ START_TEST(sscanf_spec_n_6) {
   long long int n1 = 0, n2 = 0;
 
   int16_t res1 =
-      s21_sscanf(str, format, &d1, &hn1, &dd1, &hhn1, &f1, &ff1, &n1, &k1);
+      my_sscanf(str, format, &d1, &hn1, &dd1, &hhn1, &f1, &ff1, &n1, &k1);
   int16_t res2 =
       sscanf(str, format, &d2, &hn2, &dd2, &hhn2, &f2, &ff2, &n2, &k2);
   ck_assert_int_eq(res1, res2);
@@ -81,7 +81,7 @@ START_TEST(sscanf_spec_n_7) {
   char str[] = "%p";
   char d1 = 0, d2 = 0;
 
-  int16_t res1 = s21_sscanf(str, format, &d1);
+  int16_t res1 = my_sscanf(str, format, &d1);
   int16_t res2 = sscanf(str, format, &d2);
   ck_assert_int_eq(d1, d2);
   ck_assert_int_eq(res1, res2);
@@ -98,7 +98,7 @@ START_TEST(sscanf_spec_n_8) {
   int hhn1 = 0, hhn2 = 0;
 
   int16_t res1 =
-      s21_sscanf(str, format, &s1, &hn1, &s3, &hhn1, &s5, &s7, &s9, &n1);
+      my_sscanf(str, format, &s1, &hn1, &s3, &hhn1, &s5, &s7, &s9, &n1);
   int16_t res2 =
       sscanf(str, format, &s2, &hn2, &s4, &hhn2, &s6, &s8, &s10, &n2);
   ck_assert_int_eq(res1, res2);
@@ -114,7 +114,7 @@ START_TEST(sscanf_spec_n_8) {
 END_TEST
 
 Suite *test_sscanf_n(void) {
-  Suite *s = suite_create("\033[45m-=S21_SSCANF_N=-\033[0m");
+  Suite *s = suite_create("\033[45m-=my_SSCANF_N=-\033[0m");
   TCase *tc = tcase_create("sscanf_tc");
 
   tcase_add_test(tc, sscanf_spec_n_1);

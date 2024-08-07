@@ -6,7 +6,7 @@ START_TEST(sprintf_1_n) {
   char *str3 = "Test %n Test";
   int valn1 = 0, valn2 = 0;
   ck_assert_int_eq(sprintf(str1, str3, &valn1),
-                   s21_sprintf(str2, str3, &valn2));
+                   my_sprintf(str2, str3, &valn2));
   ck_assert_pstr_eq(str1, str2);
   ck_assert_int_eq(valn1, valn2);
 }
@@ -20,7 +20,7 @@ START_TEST(sprintf_2_n) {
   int val2 = 017;
   int valn1 = 0, valn2 = 0, valn3 = 0, valn4 = 0;
   ck_assert_int_eq(sprintf(str1, str3, val, &valn1, val2, &valn3),
-                   s21_sprintf(str2, str3, val, &valn2, val2, &valn4));
+                   my_sprintf(str2, str3, val, &valn2, val2, &valn4));
   ck_assert_pstr_eq(str1, str2);
   ck_assert_int_eq(valn1, valn2);
   ck_assert_int_eq(valn3, valn4);
@@ -36,7 +36,7 @@ START_TEST(sprintf_3_n) {
   int val3 = 99;
   int valn1 = 0, valn2 = 0;
   ck_assert_int_eq(sprintf(str1, str3, val, val2, &valn1, val3),
-                   s21_sprintf(str2, str3, val, val2, &valn2, val3));
+                   my_sprintf(str2, str3, val, val2, &valn2, val3));
   ck_assert_pstr_eq(str1, str2);
   ck_assert_int_eq(valn1, valn2);
 }
@@ -53,14 +53,14 @@ START_TEST(sprintf_4_n) {
 
   ck_assert_int_eq(
       sprintf(str1, str3, val, val2, (unsigned short)val3, &valn1),
-      s21_sprintf(str2, str3, val, val2, (unsigned short)val3, &valn2));
+      my_sprintf(str2, str3, val, val2, (unsigned short)val3, &valn2));
   ck_assert_pstr_eq(str1, str2);
   ck_assert_int_eq(valn1, valn2);
 }
 END_TEST
 
 Suite *test_sprintf_n(void) {
-  Suite *s = suite_create("\033[45m-=S21_SPRINTF_N=-\033[0m");
+  Suite *s = suite_create("\033[45m-=my_SPRINTF_N=-\033[0m");
   TCase *tc = tcase_create("sprintf_tc");
 
   tcase_add_test(tc, sprintf_1_n);

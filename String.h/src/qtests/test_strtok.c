@@ -4,7 +4,7 @@ START_TEST(strtok_1) {
   char s1[] = "Hello, world!";
   char s2[] = "Hello, world!";
   char s3[] = "!";
-  ck_assert_pstr_eq(strtok(s1, s3), s21_strtok(s2, s3));
+  ck_assert_pstr_eq(strtok(s1, s3), my_strtok(s2, s3));
 }
 END_TEST
 
@@ -12,7 +12,7 @@ START_TEST(strtok_2) {
   char s1[] = "";
   char s2[] = "";
   char s3[] = "";
-  ck_assert_pstr_eq(strtok(s1, s3), s21_strtok(s2, s3));
+  ck_assert_pstr_eq(strtok(s1, s3), my_strtok(s2, s3));
 }
 END_TEST
 
@@ -20,7 +20,7 @@ START_TEST(strtok_3) {
   char s1[] = "Hello, world!";
   char s2[] = "Hello, world!";
   char s3[] = "\0";
-  ck_assert_pstr_eq(strtok(s1, s3), s21_strtok(s2, s3));
+  ck_assert_pstr_eq(strtok(s1, s3), my_strtok(s2, s3));
 }
 END_TEST
 
@@ -28,7 +28,7 @@ START_TEST(strtok_4) {
   char s1[] = "Hello, world!";
   char s2[] = "Hello, world!";
   char s3[] = "";
-  ck_assert_pstr_eq(strtok(s1, s3), s21_strtok(s2, s3));
+  ck_assert_pstr_eq(strtok(s1, s3), my_strtok(s2, s3));
 }
 END_TEST
 
@@ -36,7 +36,7 @@ START_TEST(strtok_5) {
   char s1[] = "Hello, world!";
   char s2[] = "Hello, world!";
   char s3[] = "Hello, world!";
-  ck_assert_pstr_eq(strtok(s1, s3), s21_strtok(s2, s3));
+  ck_assert_pstr_eq(strtok(s1, s3), my_strtok(s2, s3));
 }
 END_TEST
 
@@ -45,7 +45,7 @@ START_TEST(strtok_6) {
   char s2[] = "Hello, world!";
   char s3[] =
       "A sentence of several words long.Another sentence is a few words long";
-  ck_assert_pstr_eq(strtok(s1, s3), s21_strtok(s2, s3));
+  ck_assert_pstr_eq(strtok(s1, s3), my_strtok(s2, s3));
 }
 END_TEST
 
@@ -53,7 +53,7 @@ START_TEST(strtok_7) {
   char s1[] = "ABABABABABBABABABBABABABABABBA";
   char s2[] = "ABABABABABBABABABBABABABABABBA";
   char s3[] = "B";
-  ck_assert_pstr_eq(strtok(s1, s3), s21_strtok(s2, s3));
+  ck_assert_pstr_eq(strtok(s1, s3), my_strtok(s2, s3));
 }
 END_TEST
 
@@ -61,7 +61,7 @@ START_TEST(strtok_8) {
   char s1[] = "\0ABABABABABBABABABBABABABABABBA";
   char s2[] = "\0ABABABABABBABABABBABABABABABBA";
   char s3[] = "A";
-  ck_assert_pstr_eq(strtok(s1, s3), s21_strtok(s2, s3));
+  ck_assert_pstr_eq(strtok(s1, s3), my_strtok(s2, s3));
 }
 END_TEST
 
@@ -69,7 +69,7 @@ START_TEST(strtok_9) {
   char s1[] = "\0Hello, world!";
   char s2[] = "\0Hello, world!";
   char s3[] = "\0";
-  ck_assert_pstr_eq(strtok(s1, s3), s21_strtok(s2, s3));
+  ck_assert_pstr_eq(strtok(s1, s3), my_strtok(s2, s3));
 }
 END_TEST
 
@@ -77,15 +77,15 @@ START_TEST(strtok_10) {
   char s1[] = "\0Hello, world!";
   char s2[] = "\0Hello, world!";
   char s3[] = "";
-  ck_assert_pstr_eq(strtok(s1, s3), s21_strtok(s2, s3));
+  ck_assert_pstr_eq(strtok(s1, s3), my_strtok(s2, s3));
 }
 END_TEST
 
 START_TEST(strtok_11) {
-  char *s1 = s21_NULL;
-  char *s2 = s21_NULL;
+  char *s1 = my_NULL;
+  char *s2 = my_NULL;
   char s3[] = "";
-  ck_assert_pstr_eq(strtok(s1, s3), s21_strtok(s2, s3));
+  ck_assert_pstr_eq(strtok(s1, s3), my_strtok(s2, s3));
 }
 END_TEST
 
@@ -93,7 +93,7 @@ START_TEST(strtok_12) {
   char s1[] = "tuz-tuz-tuz";
   char s2[] = "tuz-tuz-tuz";
   char s3[] = "z-tuz-tuz";
-  ck_assert_pstr_eq(strtok(s1, s3), s21_strtok(s2, s3));
+  ck_assert_pstr_eq(strtok(s1, s3), my_strtok(s2, s3));
 }
 END_TEST
 
@@ -104,13 +104,13 @@ START_TEST(strtok_13) {
   char s4[] = "\0Come here";
   char s5[] = "";
 
-  ck_assert_pstr_eq(strtok(s1, s5), s21_strtok(s2, s5));
+  ck_assert_pstr_eq(strtok(s1, s5), my_strtok(s2, s5));
   for (int i = 0; i < 5; i++) {
-    ck_assert_pstr_eq(strtok(s21_NULL, s5), s21_strtok(s21_NULL, s5));
+    ck_assert_pstr_eq(strtok(my_NULL, s5), my_strtok(my_NULL, s5));
   }
-  ck_assert_pstr_eq(strtok(s3, s5), s21_strtok(s4, s5));
-  ck_assert_pstr_eq(strtok(s21_NULL, s5), s21_strtok(s21_NULL, s5));
-  ck_assert_pstr_eq(strtok(s21_NULL, s5), s21_strtok(s21_NULL, s5));
+  ck_assert_pstr_eq(strtok(s3, s5), my_strtok(s4, s5));
+  ck_assert_pstr_eq(strtok(my_NULL, s5), my_strtok(my_NULL, s5));
+  ck_assert_pstr_eq(strtok(my_NULL, s5), my_strtok(my_NULL, s5));
 }
 END_TEST
 
@@ -121,13 +121,13 @@ START_TEST(strtok_14) {
   char s4[] = "Come here";
   char s5[] = " o";
 
-  ck_assert_pstr_eq(strtok(s1, s5), s21_strtok(s2, s5));
+  ck_assert_pstr_eq(strtok(s1, s5), my_strtok(s2, s5));
   for (int i = 0; i < 5; i++) {
-    ck_assert_pstr_eq(strtok(s21_NULL, s5), s21_strtok(s21_NULL, s5));
+    ck_assert_pstr_eq(strtok(my_NULL, s5), my_strtok(my_NULL, s5));
   }
-  ck_assert_pstr_eq(strtok(s3, s5), s21_strtok(s4, s5));
-  ck_assert_pstr_eq(strtok(s21_NULL, s5), s21_strtok(s21_NULL, s5));
-  ck_assert_pstr_eq(strtok(s21_NULL, s5), s21_strtok(s21_NULL, s5));
+  ck_assert_pstr_eq(strtok(s3, s5), my_strtok(s4, s5));
+  ck_assert_pstr_eq(strtok(my_NULL, s5), my_strtok(my_NULL, s5));
+  ck_assert_pstr_eq(strtok(my_NULL, s5), my_strtok(my_NULL, s5));
 }
 END_TEST
 
@@ -138,13 +138,13 @@ START_TEST(strtok_15) {
   char s4[] = "Come here";
   char s5[] = " l";
 
-  ck_assert_pstr_eq(strtok(s1, s5), s21_strtok(s2, s5));
+  ck_assert_pstr_eq(strtok(s1, s5), my_strtok(s2, s5));
   for (int i = 0; i < 5; i++) {
-    ck_assert_pstr_eq(strtok(s21_NULL, s5), s21_strtok(s21_NULL, s5));
+    ck_assert_pstr_eq(strtok(my_NULL, s5), my_strtok(my_NULL, s5));
   }
-  ck_assert_pstr_eq(strtok(s3, s5), s21_strtok(s4, s5));
-  ck_assert_pstr_eq(strtok(s21_NULL, s5), s21_strtok(s21_NULL, s5));
-  ck_assert_pstr_eq(strtok(s21_NULL, s5), s21_strtok(s21_NULL, s5));
+  ck_assert_pstr_eq(strtok(s3, s5), my_strtok(s4, s5));
+  ck_assert_pstr_eq(strtok(my_NULL, s5), my_strtok(my_NULL, s5));
+  ck_assert_pstr_eq(strtok(my_NULL, s5), my_strtok(my_NULL, s5));
 }
 END_TEST
 
@@ -156,13 +156,13 @@ START_TEST(strtok_16) {
   char s5[] = "l";
   char s6[] = " ";
 
-  ck_assert_str_eq(strtok(s1, s5), s21_strtok(s2, s5));
+  ck_assert_str_eq(strtok(s1, s5), my_strtok(s2, s5));
   for (int i = 0; i < 5; i++) {
-    ck_assert_pstr_eq(strtok(s21_NULL, s6), s21_strtok(s21_NULL, s6));
+    ck_assert_pstr_eq(strtok(my_NULL, s6), my_strtok(my_NULL, s6));
   }
-  ck_assert_pstr_eq(strtok(s3, s6), s21_strtok(s4, s6));
-  ck_assert_pstr_eq(strtok(s21_NULL, s6), s21_strtok(s21_NULL, s6));
-  ck_assert_pstr_eq(strtok(s21_NULL, s6), s21_strtok(s21_NULL, s6));
+  ck_assert_pstr_eq(strtok(s3, s6), my_strtok(s4, s6));
+  ck_assert_pstr_eq(strtok(my_NULL, s6), my_strtok(my_NULL, s6));
+  ck_assert_pstr_eq(strtok(my_NULL, s6), my_strtok(my_NULL, s6));
 }
 END_TEST
 
@@ -172,8 +172,8 @@ START_TEST(strtok_17) {
   char s3[] = "R";
   strtok(s1, s3);
   strtok(NULL, s3);
-  s21_strtok(s2, s3);
-  s21_strtok(NULL, s3);
+  my_strtok(s2, s3);
+  my_strtok(NULL, s3);
   ck_assert_pstr_eq(s1, s2);
 }
 END_TEST
@@ -185,9 +185,9 @@ START_TEST(strtok_18) {
   strtok(s1, s3);
   strtok(NULL, s3);
   strtok(NULL, s3);
-  s21_strtok(s2, s3);
-  s21_strtok(NULL, s3);
-  s21_strtok(NULL, s3);
+  my_strtok(s2, s3);
+  my_strtok(NULL, s3);
+  my_strtok(NULL, s3);
   ck_assert_pstr_eq(s1, s2);
 }
 END_TEST
@@ -197,10 +197,10 @@ START_TEST(strtok_19) {
   char s2[] = "CAPSI12334213";
   char s3[] = "CAPSI123";
   char *s4 = strtok(s1, s3);
-  char *s6 = strtok(s21_NULL, s3);
+  char *s6 = strtok(my_NULL, s3);
 
-  char *s5 = s21_strtok(s2, s3);
-  char *s7 = s21_strtok(s21_NULL, s3);
+  char *s5 = my_strtok(s2, s3);
+  char *s7 = my_strtok(my_NULL, s3);
 
   ck_assert_pstr_eq(s1, s2);
   ck_assert_pstr_eq(s4, s5);
@@ -215,15 +215,15 @@ START_TEST(strtok_20) {
   strtok(s1, s3);
   strtok(NULL, s2);
   strtok(NULL, s2);
-  s21_strtok(s2, s3);
-  s21_strtok(NULL, s3);
-  s21_strtok(NULL, s3);
+  my_strtok(s2, s3);
+  my_strtok(NULL, s3);
+  my_strtok(NULL, s3);
   ck_assert_pstr_eq(s1, s2);
 }
 END_TEST
 
 Suite *test_strtok(void) {
-  Suite *s = suite_create("\033[45m-=S21_STRTOK=-\033[0m");
+  Suite *s = suite_create("\033[45m-=my_STRTOK=-\033[0m");
   TCase *tc = tcase_create("strtok_tc");
 
   tcase_add_test(tc, strtok_1);
