@@ -1,0 +1,328 @@
+#include "s21_string.h"
+
+#if defined(__APPLE__)
+#define MAX_ERRLIST 107
+#define MIN_ERRLIST -1
+#define ERROR "Unknown error: "
+
+const char *maserror[] = {
+    "Undefined error: 0",                /*  0 - ENOERROR */
+    "Operation not permitted",           /*  1 - EPERM */
+    "No such file or directory",         /*  2 - ENOENT */
+    "No such process",                   /*  3 - ESRCH */
+    "Interrupted system call",           /*  4 - EINTR */
+    "Input/output error",                /*  5 - EIO */
+    "Device not configured",             /*  6 - ENXIO */
+    "Argument list too long",            /*  7 - E2BIG */
+    "Exec format error",                 /*  8 - ENOEXEC */
+    "Bad file descriptor",               /*  9 - EBADF */
+    "No child processes",                /* 10 - ECHILD */
+    "Resource deadlock avoided",         /* 11 - EDEADLK */
+    "Cannot allocate memory",            /* 12 - ENOMEM */
+    "Permission denied",                 /* 13 - EACCES */
+    "Bad address",                       /* 14 - EFAULT */
+    "Block device required",             /* 15 - ENOTBLK */
+    "Resource busy",                     /* 16 - EBUSY */
+    "File exists",                       /* 17 - EEXIST */
+    "Cross-device link",                 /* 18 - EXDEV */
+    "Operation not supported by device", /* 19 - ENODEV */
+    "Not a directory",                   /* 20 - ENOTDIR */
+    "Is a directory",                    /* 21 - EISDIR */
+    "Invalid argument",                  /* 22 - EINVAL */
+    "Too many open files in system",     /* 23 - ENFILE */
+    "Too many open files",               /* 24 - EMFILE */
+    "Inappropriate ioctl for device",    /* 25 - ENOTTY */
+    "Text file busy",                    /* 26 - ETXTBSY */
+    "File too large",                    /* 27 - EFBIG */
+    "No space left on device",           /* 28 - ENOSPC */
+    "Illegal seek",                      /* 29 - ESPIPE */
+    "Read-only file system",             /* 30 - EROFS */
+    "Too many links",                    /* 31 - EMLINK */
+    "Broken pipe",                       /* 32 - EPIPE */
+
+    /* math software */
+    "Numerical argument out of domain", /* 33 - EDOM */
+    "Result too large",                 /* 34 - ERANGE */
+
+    /* non-blocking and interrupt i/o */
+    "Resource temporarily unavailable", /* 35 - EAGAIN */
+                                        /* 35 - EWOULDBLOCK */
+    "Operation now in progress",        /* 36 - EINPROGRESS */
+    "Operation already in progress",    /* 37 - EALREADY */
+
+    /* ipc/network software -- argument errors */
+    "Socket operation on non-socket", /* 38 - ENOTSOCK */
+    "Destination address required",   /* 39 - EDESTADDRREQ */
+    "Message too long",               /* 40 - EMSGSIZE */
+    "Protocol wrong type for socket", /* 41 - EPROTOTYPE */
+    "Protocol not available",         /* 42 - ENOPROTOOPT */
+    "Protocol not supported",         /* 43 - EPROTONOSUPPORT */
+    "Socket type not supported",      /* 44 - ESOCKTNOSUPPORT */
+    "Operation not supported",        /* 45 - ENOTSUP */
+    "Protocol family not supported",  /* 46 - EPFNOSUPPORT */
+                                      /* 47 - EAFNOSUPPORT */
+    "Address family not supported by protocol family",
+    "Address already in use",         /* 48 - EADDRINUSE */
+    "Can't assign requested address", /* 49 - EADDRNOTAVAIL */
+
+    /* ipc/network software -- operational errors */
+    "Network is down",                     /* 50 - ENETDOWN */
+    "Network is unreachable",              /* 51 - ENETUNREACH */
+    "Network dropped connection on reset", /* 52 - ENETRESET */
+    "Software caused connection abort",    /* 53 - ECONNABORTED */
+    "Connection reset by peer",            /* 54 - ECONNRESET */
+    "No buffer space available",           /* 55 - ENOBUFS */
+    "Socket is already connected",         /* 56 - EISCONN */
+    "Socket is not connected",             /* 57 - ENOTCONN */
+    "Can't send after socket shutdown",    /* 58 - ESHUTDOWN */
+    "Too many references: can't splice",   /* 59 - ETOOMANYREFS */
+    "Operation timed out",                 /* 60 - ETIMEDOUT */
+    "Connection refused",                  /* 61 - ECONNREFUSED */
+
+    "Too many levels of symbolic links", /* 62 - ELOOP */
+    "File name too long",                /* 63 - ENAMETOOLONG */
+
+    /* should be rearranged */
+    "Host is down",        /* 64 - EHOSTDOWN */
+    "No route to host",    /* 65 - EHOSTUNREACH */
+    "Directory not empty", /* 66 - ENOTEMPTY */
+
+    /* quotas & mush */
+    "Too many processes",  /* 67 - EPROCLIM */
+    "Too many users",      /* 68 - EUSERS */
+    "Disc quota exceeded", /* 69 - EDQUOT */
+
+    /* Network File System */
+    "Stale NFS file handle",             /* 70 - ESTALE */
+    "Too many levels of remote in path", /* 71 - EREMOTE */
+    "RPC struct is bad",                 /* 72 - EBADRPC */
+    "RPC version wrong",                 /* 73 - ERPCMISMATCH */
+    "RPC prog. not avail",               /* 74 - EPROGUNAVAIL */
+    "Program version wrong",             /* 75 - EPROGMISMATCH */
+    "Bad procedure for program",         /* 76 - EPROCUNAVAIL */
+
+    "No locks available",                /* 77 - ENOLCK */
+    "Function not implemented",          /* 78 - ENOSYS */
+    "Inappropriate file type or format", /* 79 - EFTYPE */
+    "Authentication error",              /* 80 - EAUTH */
+    "Need authenticator",                /* 81 - ENEEDAUTH */
+
+    "Device power is off",                       /* 82 - EPWROFF */
+    "Device error",                              /* 83 - EDEVERR */
+    "Value too large to be stored in data type", /* 84 - EOVERFLOW */
+
+    /* program loading errors */
+    "Bad executable (or shared library)", /* 85 - EBADEXEC */
+    "Bad CPU type in executable",         /* 86 - EBADARCH */
+    "Shared library version mismatch",    /* 87 - ESHLIBVERS */
+    "Malformed Mach-o file",              /* 88 - EBADMACHO */
+    "Operation canceled",                 /* 89 - ECANCELED */
+    "Identifier removed",                 /* 90 - EIDRM */
+    "No message of desired type",         /* 91 - ENOMSG */
+    "Illegal byte sequence",              /* 92 - EILSEQ */
+    "Attribute not found",                /* 93 - ENOATTR */
+    "Bad message",                        /* 94 - EBADMSG */
+    "EMULTIHOP (Reserved)",               /* 95 - EMULTIHOP */
+    "No message available on STREAM",     /* 96 - ENODATA */
+    "ENOLINK (Reserved)",                 /* 97 - ENOLINK */
+    "No STREAM resources",                /* 98 - ENOSR */
+    "Not a STREAM",                       /* 99 - ENOSTR */
+    "Protocol error",                     /* 100 - EPROTO */
+    "STREAM ioctl timeout",               /* 101 - ETIME */
+    "Operation not supported on socket",  /* 102 - EOPNOTSUPP */
+    "Policy not found",                   /* 103 - ENOPOLICY */
+    "State not recoverable",              /* 104 - ENOTRECOVERABLE */
+    "Previous owner died",                /* 105 - EOWNERDEAD */
+
+    "Interface output queue is full", /* 106 - EQFULL */
+};
+
+#elif defined(__linux__)
+#define MAX_ERRLIST 134
+#define MIN_ERRLIST -1
+#define ERROR "Unknown error "
+
+static const char *maserror[] = {
+    "Success",
+    "Operation not permitted",
+    "No such file or directory",
+    "No such process",
+    "Interrupted system call",
+    "Input/output error",
+    "No such device or address",
+    "Argument list too long",
+    "Exec format error",
+    "Bad file descriptor",
+    "No child processes",
+    "Resource temporarily unavailable",
+    "Cannot allocate memory",
+    "Permission denied",
+    "Bad address",
+    "Block device required",
+    "Device or resource busy",
+    "File exists",
+    "Invalid cross-device link",
+    "No such device",
+    "Not a directory",
+    "Is a directory",
+    "Invalid argument",
+    "Too many open files in system",
+    "Too many open files",
+    "Inappropriate ioctl for device",
+    "Text file busy",
+    "File too large",
+    "No space left on device",
+    "Illegal seek",
+    "Read-only file system",
+    "Too many links",
+    "Broken pipe",
+    "Numerical argument out of domain",
+    "Numerical result out of range",
+    "Resource deadlock avoided",
+    "File name too long",
+    "No locks available",
+    "Function not implemented",
+    "Directory not empty",
+    "Too many levels of symbolic links",
+    "Unknown error 41",
+    "No message of desired type",
+    "Identifier removed",
+    "Channel number out of range",
+    "Level 2 not synchronized",
+    "Level 3 halted",
+    "Level 3 reset",
+    "Link number out of range",
+    "Protocol driver not attached",
+    "No CSI structure available",
+    "Level 2 halted",
+    "Invalid exchange",
+    "Invalid request descriptor",
+    "Exchange full",
+    "No anode",
+    "Invalid request code",
+    "Invalid slot",
+    "Unknown error 58",
+    "Bad font file format",
+    "Device not a stream",
+    "No data available",
+    "Timer expired",
+    "Out of streams resources",
+    "Machine is not on the network",
+    "Package not installed",
+    "Object is remote",
+    "Link has been severed",
+    "Advertise error",
+    "Srmount error",
+    "Communication error on send",
+    "Protocol error",
+    "Multihop attempted",
+    "RFS specific error",
+    "Bad message",
+    "Value too large for defined data type",
+    "Name not unique on network",
+    "File descriptor in bad state",
+    "Remote address changed",
+    "Can not access a needed shared library",
+    "Accessing a corrupted shared library",
+    ".lib section in a.out corrupted",
+    "Attempting to link in too many shared libraries",
+    "Cannot exec a shared library directly",
+    "Invalid or incomplete multibyte or wide character",
+    "Interrupted system call should be restarted",
+    "Streams pipe error",
+    "Too many users",
+    "Socket operation on non-socket",
+    "Destination address required",
+    "Message too long",
+    "Protocol wrong type for socket",
+    "Protocol not available",
+    "Protocol not supported",
+    "Socket type not supported",
+    "Operation not supported",
+    "Protocol family not supported",
+    "Address family not supported by protocol",
+    "Address already in use",
+    "Cannot assign requested address",
+    "Network is down",
+    "Network is unreachable",
+    "Network dropped connection on reset",
+    "Software caused connection abort",
+    "Connection reset by peer",
+    "No buffer space available",
+    "Transport endpoint is already connected",
+    "Transport endpoint is not connected",
+    "Cannot send after transport endpoint shutdown",
+    "Too many references: cannot splice",
+    "Connection timed out",
+    "Connection refused",
+    "Host is down",
+    "No route to host",
+    "Operation already in progress",
+    "Operation now in progress",
+    "Stale file handle",
+    "Structure needs cleaning",
+    "Not a XENIX named type file",
+    "No XENIX semaphores available",
+    "Is a named type file",
+    "Remote I/O error",
+    "Disk quota exceeded",
+    "No medium found",
+    "Wrong medium type",
+    "Operation canceled",
+    "Required key not available",
+    "Key has expired",
+    "Key has been revoked",
+    "Key was rejected by service",
+    "Owner died",
+    "State not recoverable",
+    "Operation not possible due to RF-kill",
+    "Memory page has hardware error"};
+#endif
+
+char *s21_strerror(int errnum) {
+  char *ptr = s21_NULL;
+  if (errnum >= MAX_ERRLIST || errnum <= MIN_ERRLIST) {
+    static char part1[33] = ERROR;
+    static char part2[33] = "\0";
+    part1[s21_strlen(ERROR)] = '\0';
+    s21_errnum_tostring(part2, errnum);
+    s21_strcat(part1, part2);
+    ptr = part1;
+  } else {
+    ptr = (char *)maserror[errnum];
+  }
+  return (char *)ptr;
+}
+
+void s21_errnum_tostring(char *str, int num) {
+  int i = 0;
+  int len = 0;
+  int num2 = num;
+  int flag = 0;
+  while (num2 != 0) {
+    len++;
+    num2 /= 10;
+  }
+  char part[len];
+  if (num < 0) {
+    flag = 1;
+    num = num * (-1);
+  }
+  while (num != 0) {
+    part[i] = (num % 10 + '0');
+    num = num / 10;
+    i++;
+  }
+  part[i] = '\0';
+  for (s21_size_t i = 0; i < s21_strlen(part); i++) {
+    if (flag == 0)
+      str[i] = part[s21_strlen(part) - i - 1];
+    else
+      str[i + 1] = part[s21_strlen(part) - i - 1];
+  }
+  if (flag == 1) {
+    str[0] = '-';
+    str[s21_strlen(part) + 1] = '\0';
+  } else
+    str[s21_strlen(part)] = '\0';
+}
