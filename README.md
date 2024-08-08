@@ -7,7 +7,7 @@ C language project's repository
 ### String.h
 
 Реализация функций библиотеки [string.h](https://github.com/Desolitto/CProjects/tree/develop/String.h)
-
+<!--
 ### Decimal.h
 
 Описание проекта decimal.h...
@@ -15,7 +15,7 @@ C language project's repository
 ### Matrix
 
 Описание проекта matrix...
-
+-->
 ### Calculator
 
 Реализация проекта калькулятора [SmartCalc](https://github.com/Desolitto/CProjects/tree/main/SmartCalc)
