@@ -18,7 +18,7 @@ C language project's repository
 
 ### Calculator
 
-Описание проекта calculator...
+Реализация Smart Calc...
 
 ### 3D_Viewer_v1.0
 
