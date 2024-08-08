@@ -22,4 +22,4 @@ C language project's repository
 
 ### 3D_Viewer_v1.0
 
-Описание проекта viewer_v1.0...
+Реализация проекта [3DViewer_v1.0](https://github.com/Desolitto/CProjects/tree/main/3DViewer_v1.0) 
