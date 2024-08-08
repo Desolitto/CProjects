@@ -18,7 +18,7 @@ C language project's repository
 
 ### Calculator
 
-Реализация Smart Calc...
+Реализация проекта калькулятора [SmartCalc](https://github.com/Desolitto/CProjects/tree/main/SmartCalc)
 
 ### 3D_Viewer_v1.0
 
